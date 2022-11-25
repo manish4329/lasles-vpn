@@ -1,38 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	display: inline-block;
+}
+
 .App {
-  text-align: center;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Navbar {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+	width: 80vw;
+	height: 10vh;
+	padding: 30px;
+	font-family: 'Rubik', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Logo {
+	display: flex;
+	justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Navlink {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	font-size: small;
+	color: grey;
 }
 
-.App-link {
-  color: #61dafb;
+.link {
+	padding: 0 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.SignBtn {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	font-weight: bolder;
+}
+
+.SignIn {
+	background: none;
+	padding: 5px 20px;
+	font-weight: bolder;
+	border: 1px solid transparent;
+	font-size: medium;
+}
+.SignIn:hover {
+	border: solid;
+	border-radius: 20px;
+	border-color: red;
+	color: red;
+}
+
+.SignUp {
+	background: none;
+	padding: 5px 20px;
+	font-weight: bolder;
+	border: 1px solid transparent;
+	font-size: medium;
+}
+.SignUp:hover {
+	border: solid;
+	border-radius: 20px;
+	border-color: red;
+	color: red;
+}
+
+.About {
+	display: flex;
+	flex-direction: column;
+	width: 80vw;
+	height: 90vh;
+	font-family: 'Rubik', sans-serif;
+}
+
+.UprAbout {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 70%;
+}
+
+.AboutPart {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	width: 100%;
+}
+
+.AboutPart strong {
+	font-size: xxx-large;
+	font-weight: 400;
+}
+
+.AboutPart strong b {
+	font-size: xxx-large;
+	font-weight: 700;
+}
+
+.About small {
+	font-size: small;
+	font-weight: 200;
+	color: rgb(106, 102, 102);
+}
+.AboutPart button {
+	background-color: red;
+	border: none;
+	border-radius: 5px;
+	height: 40px;
+	width: 150px;
+	color: white;
+	font-weight: bolder;
+	font-size: x-small;
+	box-shadow: 0 2px 4px 0 rgba(181, 61, 61, 0.2),
+		0 6px 20px 0 rgba(215, 78, 78, 1);
+}
+
+.BtmAbout {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	width: 100%;
+	height: 30%;
+}
+
+.BtmCover {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: row;
+	height: 70%;
+	width: 80%;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
+}
+
+.BtmCover hr {
+	height: 8vh;
+	width: 1px;
+	border-width: 0;
+	background-color: grey;
+	opacity: 0.3;
+}
+
+.BtmInfo {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.BtmInfo p small {
+	color: grey;
+	font-size: small;
+}
+
+.BtmImg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(245, 56, 56, 0.3);
+	border-radius: 50%;
+	padding: 12px;
+}
+
+.BtmInfo p {
+	padding-left: 10px;
+}
+
+.Features {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100vh;
+	width: 80vw;
+	padding: 40px;
+}
+
+.FeaturesImg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.FeaturesList {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: 100px;
+}
+
+.FeaturesList strong {
+	font-size: xxx-large;
+	font-weight: 700;
+}
+
+.FeaturesList small {
+	color: rgb(106, 102, 102);
+	font-size: small;
+	font-weight: 300;
+}
+
+.CheckImg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.CheckImg svg {
+	padding-right: 5px;
+}
+
+.Pricing {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 80vw;
+	padding: 40px;
+}
+
+.PricingHeader {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.PricingHeader strong {
+	font-size: xxx-large;
+	font-weight: 700;
+}
+
+.PricingHeader small {
+	color: rgb(106, 102, 102);
+	font-size: small;
+	font-weight: 300;
+}
+
+.PricingBox {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 70vh;
+	width: 70vw;
+}
+
+.Box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	border: 2px solid rgba(106, 102, 102, 0.3);
+	border-radius: 5px;
+	height: 30rem;
+	width: 15rem;
+}
+
+.Box:hover {
+	border: 2px solid rgb(250, 3, 3);
+}
+
+.PricingDetails {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: flex-start;
+}
+
+.Tick {
+	color: green;
+	padding-right: 5px;
+}
+
+.PricingDetails small {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.PricingBtn {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.Price {
+	padding-bottom: 10px;
+}
+
+.PricingBtn button {
+	width: 8rem;
+	height: 2rem;
+	border: 2px solid red;
+	border-radius: 20px;
+	background: none;
+	color: red;
+}
+
+.PricingBtn button:hover {
+	color: white;
+	background-color: red;
+	box-shadow: 0 2px 4px 0 rgba(181, 61, 61, 0.2),
+		0 6px 20px 0 rgba(215, 78, 78, 1);
+}
+
+.Globe {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100vh;
+	width: 80vw;
+}
+
+.GlobeHeader {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.GlobeHeader strong {
+	font-size: xx-large;
+	font-weight: 600;
+}
+
+.GlobeHeader small {
+	color: rgb(106, 102, 102);
+	font-size: small;
+	font-weight: 300;
+}
+
+.GlobalBtmImg {
+	display: flex;
+	flex-direction: row;
+	width: 80%;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.Testimonials {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100vh;
+	width: 80vw;
+}
+
+.TestHeader {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.TestHeader strong {
+	font-size: xx-large;
+	font-weight: 600;
+	padding-bottom: 5px;
+}
+
+.TestHeader small {
+	color: rgb(106, 102, 102);
+	font-size: small;
+	font-weight: 300;
+	padding-bottom: 5px;
+}
+
+.TestBox {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 40vh;
+	width: 80vw;
+}
+
+.CoverBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	border: 2px solid rgba(106, 102, 102, 0.3);
+	border-radius: 5px;
+	height: 10rem;
+	width: 18rem;
+	padding: 15px;
+}
+.TextImg {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 20%;
+	width: 80%;
+	padding-right: 10px;
+}
+
+.TestImg strong small {
+	color: rgb(106, 102, 102);
+	font-size: small;
+	font-weight: 200;
+}
+
+.Rating {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Star {
+	color: orangered;
+}
+
+.Rating strong {
+	padding-right: 5px;
+}
+
+.BtmBtn {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 10rem;
+	width: 80vw;
+}
+
+.Slider {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width: 5rem;
+}
+.point1 {
+	border: 2px solid transparent;
+	background-color: red;
+	border-radius: 10px;
+	height: 5px;
+	width: 25px;
+}
+
+.point {
+	border: 2px solid transparent;
+	background-color: rgb(214, 210, 210);
+	border-radius: 50%;
+	height: 5px;
+	width: 5px;
+}
+
+.Btn {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 7rem;
+	height: 7rem;
+}
+
+.Btn button {
+	border-radius: 50%;
+	border: 1px solid red;
+	color: red;
+	background: none;
+	height: 3rem;
+	width: 3rem;
+}
+
+.Btn button:hover {
+	background: red;
+	color: white;
+}
+
+.Help {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100vh;
+	width: 80vw;
+}
+
+.Subscribe {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 30%;
+	width: 100%;
+	padding: 30px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
+}
+
+.SubHeader strong {
+	font-size: xx-large;
+	font-weight: 700;
+}
+
+.SubHeader small {
+	color: rgb(69, 64, 64);
+	font-size: small;
+	font-weight: 300;
+}
+
+.SubBtn button{
+	background-color: red;
+	border: none;
+	border-radius: 5px;
+	height: 40px;
+	width: 150px;
+	color: white;
+	font-weight: bolder;
+	font-size: x-small;
+	box-shadow: 0 2px 4px 0 rgba(181, 61, 61, 0.2),
+		0 6px 20px 0 rgba(215, 78, 78, 1);
+}
+
+.Bottom{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 70%;
+	width: 100%;
+	padding: 50px;
+}
+
+.Network{
+	display: flex;
+	flex-direction: column;
+}
+
+.HelpList{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.HelpLink{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
